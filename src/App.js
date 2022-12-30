@@ -6,17 +6,8 @@ import Header from "./components/Header";
 export default function App() {
   
     return (
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8"/>
-            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link rel="stylesheet" href="css/normalize.css"/>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet"/>
-            <title>Hair Salon</title>
-        </head>
-        <body>
+
+        <>
           <Header />
             {/* Main hero section */}
             <main>
@@ -91,8 +82,8 @@ export default function App() {
                     <img src="https://res.cloudinary.com/djlowrayn/image/upload/v1646329860/hairSalon/gallery_h4te8g.png" alt=""/>
                 </div>
                 </section>
-        </body>
-        </html>
+       
+        </>
         
     );
   }
