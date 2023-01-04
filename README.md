@@ -21,7 +21,7 @@
   <h3 align="center">DapperDudes Barber</h3>
 
   <p align="center">
-    Orignally a html/css website rebuilt in React.
+    A website showing services and contact info for a local Barbershop. Orignally made with html/css/JS, now updated and rebuilt in React.
     <br />
     <br />
     <a href="https://stewartsitetestdomain.netlify.app/">View Demo</a>
