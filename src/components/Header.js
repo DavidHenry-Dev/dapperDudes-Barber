@@ -1,17 +1,20 @@
-
-
-export default function Header() {
+const Header = () => {
     return(
         <header>
             <nav>
-                <img src="https://res.cloudinary.com/djlowrayn/image/upload/c_scale,w_200/v1653853880/hairSalon/logo2_aiaexh.png" class = "logo" alt=""/>
+                <img src="https://res.cloudinary.com/djlowrayn/image/upload/c_scale,w_200/v1653853880/hairSalon/logo2_aiaexh.png" className = "logo" alt=""/>
                 <ul>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">LOOKBOOK</a></li>
-                <li><a href="#">CONTACT</a></li>
+                 <Link url={'#'} text={'About'}/>  
+                 <Link url={'#'} text={'Services'}/>  
+                 <Link url={'#'} text={'Contact'}/>   
                 </ul>
             </nav>
         </header>
     )
 }
+
+const Link = ({url,text}) => {
+    return <li><a href={url}>{text}</a></li>
+}
+
+export default Header;
