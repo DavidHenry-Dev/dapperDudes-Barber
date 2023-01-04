@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Product Name Screen Shot](https://res.cloudinary.com/davidhenrydev/image/upload/v1671555027/Github%20Project%20Snapshots/ITsnapshot_t4upad.png)
+![Product Name Screen Shot](https://res.cloudinary.com/davidhenrydev/image/upload/v1653824895/hairSalon/nathon-oski-EW_rqoSdDes-unsplash_zmowvb.jpg)
 
 A super fast, responsive personal site I built for a client to broaden his reach and gain new customers.
 
