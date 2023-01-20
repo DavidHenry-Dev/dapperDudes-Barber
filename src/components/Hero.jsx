@@ -1,4 +1,4 @@
-import bgImage from '../images/barbershop-bg.jpg'
+import bgImage from '../assets/barbershop-bg.jpg'
 
 const Hero = () => {
     return(

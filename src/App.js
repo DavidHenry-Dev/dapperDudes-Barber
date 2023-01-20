@@ -1,7 +1,10 @@
+import React from "react";
 import "./style.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Barber from "./components/Barber";
+import { Barber } from './components/Barber';
+import { barber1, barber2, barber3} from './assets';
+
 
 
 export default function App() {
@@ -36,7 +39,7 @@ export default function App() {
             <section className="vidSect">
                 <div className="container">
                     <section>
-                    <section><img src="/images/cuttingHair.jpg" alt=""/>
+                    <section><img src="/src/assets/cuttingHair.jpg" alt=""/>
                     <h2>MAKE YOUR OWN MOMENTUM</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo sapiente amet fugit, voluptatibus error tempore in id. Sequi error ullam eum praesentium earum, alias vero eius maiores iste sit.</p>
                     <button><a href="#">- READ MORE</a></button>
@@ -47,9 +50,9 @@ export default function App() {
             {/* stylist section */}
             <section className="stylistSect">
                 <div className="container">
-                <Barber />
-                <section><img src="/images/barber2.jpg" alt=""/></section>
-                <section><img src="/images/barber3.jpg" alt=""/></section>
+                <Barber imageURL={'barber1'} />
+                <section><img src="/src/assets/barber2.jpg" alt=""/></section>
+                <section><img src="/src/assets/barber3.jpg" alt=""/></section>
             </div>
             </section>
             {/* Offers section */}
