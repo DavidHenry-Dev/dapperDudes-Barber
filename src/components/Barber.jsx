@@ -1,6 +1,10 @@
-import { barber1} from '../assets';
+import React from 'react';
 
- export const Barber = ({imageURL}) => (
-     <img src={imageURL}/>
+const Barber = ({src}) => (
+    <div>
+        <img src={src} />
+    </div>
+    
  );
 
+export default Barber

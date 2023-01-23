@@ -2,9 +2,10 @@ import React from "react";
 import "./style.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import { Barber } from './components/Barber';
-import { barber1, barber2, barber3} from './assets';
-
+import Barber from '../src/components/Barber';
+import barber1 from '../src/assets/barber1.jpg'
+import barber2 from '../src/assets/barber2.jpg'
+import barber3 from '../src/assets/barber3.jpg'
 
 
 export default function App() {
@@ -50,9 +51,9 @@ export default function App() {
             {/* stylist section */}
             <section className="stylistSect">
                 <div className="container">
-                <Barber imageURL={'barber1'} />
-                <section><img src="/src/assets/barber2.jpg" alt=""/></section>
-                <section><img src="/src/assets/barber3.jpg" alt=""/></section>
+                <Barber src={barber1} />
+                <Barber src={barber2} />
+                <Barber src={barber3} />
             </div>
             </section>
             {/* Offers section */}
