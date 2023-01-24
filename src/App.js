@@ -1,17 +1,13 @@
 import React from "react";
 import "./style.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Barber from '../src/components/Barber';
-import barber1 from '../src/assets/barber1.jpg'
-import barber2 from '../src/assets/barber2.jpg'
-import barber3 from '../src/assets/barber3.jpg'
+import { Header, Hero, Barber }from "./components";
+import { barber1, barber2, barber3 } from './assets'
+
 
 
 export default function App() {
   
     return (
-
         <>
           <Header />
             {/* Main hero section */}
