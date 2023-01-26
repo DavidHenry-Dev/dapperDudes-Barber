@@ -1,5 +1,11 @@
 /****************** GLOBAL STYLING *****************/
 
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&family=Raleway:wght@600&family=Roboto+Slab:wght@500&display=swap');
+
 * {
     box-sizing: border-box;
     font-size: 10px;
@@ -8,7 +14,9 @@
 }
 
 body {
-    font-family: 'Spectral', serif;
+    font-family: 'Roboto Slab', sans-serif;
+    height: 100vh
+    /* box-shadow: inset 40px 0px 80px rgba(0, 0, 0, 0.2); */
 }
 
 .container {
@@ -25,21 +33,21 @@ li,a {
     display: none;
 }
 
-header .container {
-    padding: 0;
-}
+
+/********* NAVIGATION ***********/
+
 
 nav {
     display: flex;
-    justify-content: space-between;
-    background-color:#000;
-   
+    flex-direction: column;
 }
 
 
 .logo {
- margin: 0;
- padding-left: 1rem;
+ height: 40px;
+ width: 40px;
+ padding: 0;
+ margin: .5rem;
 }
 
 nav ul {
@@ -53,41 +61,127 @@ nav li a{
     font-size: 2rem;
 }
 
-/******************* MAIN & HERO *********************/
-.main > * {
-    margin-bottom: 3rem;
+.menu-container {
+    background: #000;
 }
+/* ------MOBILE NAV-------- */
 
-.main {
-    min-height: 500px;
+.menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: left;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .menu-button-line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 6rem;
+}
+  
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+.slide-in-right {
+    animation: slide-in-right 0.5s ease-out;
+    animation-fill-mode: both;
+    display: none;
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+    }
+    
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ------------------------- */
+
+
+/******************* MAIN & HERO *********************/
+
+.main {
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap:5rem;
     color: #fff;
 }
 
 .headline {
-    background:  linear-gradient(
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
-      )
+    text-align: center;
+    margin-top: 10rem;
 }
 
 main h1 { 
-    font-size: 3rem;
+    color: #f0b45b;
+    font-size: 3.5rem;
     font-weight: 600;
 }
 
-.headline button {
-    height: 35px;
-    width: 125px;
-    background: #000;
-    color: #fff;
+main h2 { 
+    font-size: 2.8rem;
+    font-weight: 600;
 }
 
-.headline button a {
-    color: #fff;
+main p {
+    font-size: 1.2rem;
+    font-weight: 600; 
+    margin-top: 1rem;
+}
+
+.bookBtn {
+    height: 30px;
+    width: 125px;
+    background: #f0b45b;
+    border: none;
+}
+
+.bookBtn a {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .bookNow {
@@ -114,130 +208,180 @@ main h1 {
     color: black;
 }
 
-/* Info and 2nd section */
-.infoSect > * {
-    margin: 3rem 0;
+/******* ABOUT COMPANY SECTION *********/
+.about-section{
+    padding: 1rem;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.infoSect .container{
+.about-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    border-left: 3px solid #f0b45b;
+    padding-left: 1rem;
+}
+
+.cuttingHair {
+     margin-top:4rem;
+     height: 200;
+     width: 340px;
+}
+
+.about-section p {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/********* SERVICES SECTION ***********/
+
+.services-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
-    row-gap: 2rem;
+    margin-top: 6rem;
+    row-gap: 2.5rem;
+}
+.services-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    border-left: 3px solid #f0b45b;
+    padding-left: 1rem;
 }
 
-.infoSect i{
-    font-size: 3.5rem;
-    padding: 1rem 0;
+
+/* you were trying to figure out why this wasnt working when you stopped */
+.service {
+    background-color: #faf0dd;
+    height: 7rem;
+    width: 30rem;
+} 
+
+.scheduleBtn {
+    margin-top: 1rem;
+    height: 30px;
+    width: 125px;
+    background: #0e121a;
+    border: none;
 }
 
-/* video and 3rd section */
-
-.vidSect {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    align-items: center;
-    background: rgb(243, 243, 243);
+.scheduleBtn a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-.vidSect section {
+
+/************ MEET THE TEAM SECTION **********/
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  background: #0e121a;
+  justify-content: center;
+  color: #000;
+}
+
+.team-section h2 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    font-size: 2rem;
+    text-align: center;
+    color:#f0b45b;
+}
+
+.employee {
+    width: 30rem;
+    text-align: center;    
+}
+
+.employee img {
+    position: relative;
+    height: 28rem;
+    width: 22rem;
+    z-index: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.employee h3 {
+    padding-top:2rem;
+    color:#000;
+    font-size: 1.4rem;   
+}
+
+.employee p {
+    padding: 2px 1.2rem;
+    color: #3e4247;
+}
+
+.details {
+    height: 12rem;
+    width: 27rem;
+    background-color: #faf0dd;
+    bottom: 1.5rem;
+    position: relative;
+    z-index: 0;
+  
+}
+
+/******** CONTACT SECTION ***********/
+
+.contact-section {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1rem;
 }
 
-.vidSect h2 {
-    font-size: 1.4rem;
-    margin: 0;
+.contact-section h2 {
+    font-size: 2.4rem;
+    color:#0e121a;
 }
 
-.vidSect p {
-    font-size: .9rem;
+.contact-info {
+    margin-top: 3rem;
+    line-height: 2;
 }
 
-.vidSect button {
-    height: 40px;
-    width: 50px;
-    background: #000;;
+.contact-info p {
+    font-size: 1.2rem;
 }
 
-.vidSect button a {
-    color:#fff;
+.contact-info i {
+    color:#f0b45b;
+    font-size: 1.2rem;
+    margin-right: 1rem;
 }
 
-.vidSect section img{
-   width:  30rem;
+.appntBtn {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    height: 30px;
+    width: 150px;
+    background: #0e121a;
+    border: none;
+    color: #fff;
 }
 
-.stylistSect .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+/* .appntBtn a {
+    color: #fff;
+} */
+
+/********* FOOTER ****************/
+
+.footer {
+    height: 250px;
+    background: #000;
 }
-
-.stylistSect img {
-   width: 24rem;
-   height: 30rem;
-}
-
-.offerSect {
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.offerSect section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background: #EFEDEE;
-}
-
-.offerSect span {
-    font-size: .75rem;
-}
-
-.offerSect p {
-    font-size: 1.4rem;
-   
-}
-
-.offerSect button {
-    font-size: .6rem;
-    background: black;
-    height: 40px;
-    width: 100px;
-}
-
-.offerSect button a {
-    color: white;
-}
-
-.offerSect img {
-  width: 100%;
-}
-
-/* Gallery Section */
-
-.gallerySect {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.gallerySect img {
-    width: 100%;
-}
-
-
-/* * {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-  } */
