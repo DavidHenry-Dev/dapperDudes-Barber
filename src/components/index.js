@@ -5,6 +5,7 @@ import Section from "./Section";
 import Card from "./Card";
 import Button from "./Button";
 import Footer from "./Footer";
+import Dash from "./Dash";
 
 export {
     Barber,
@@ -14,4 +15,5 @@ export {
     Card,
     Button,
     Footer,
+    Dash,
 }
