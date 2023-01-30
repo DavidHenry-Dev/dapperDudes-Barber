@@ -1,16 +1,19 @@
 import React from "react";
 import "./style.css";
-import { Header, Hero, Barber, Section, Card, Button, Footer, Dash }from "./components";
+import { Header, Hero, Barber, Section, Card, Button, Footer, Dash } from "./components";
 import { barber1, barber2, barber3, cuttingHair } from './assets'
-import { Link } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import SignUpPage from "./pages/SignUpPage";
 
 
-
-export default function App() {
-  
-    return (
-        <>
-          <Header />
+const App =() => (
+      <BrowserRouter>
+          <Header>
+            <Routes>
+              <Route exact path="/" />
+              <Route exact path="/SignUpPage" component={<SignUpPage />} />
+            </Routes> 
+          </Header>  
             {/* Main hero section */}
           <Hero />
             {/* Info & about sections */}
@@ -45,6 +48,9 @@ export default function App() {
                 <Button className='appntBtn'>Make an appointment</Button>
             </Section>
             <Footer className='footer' />
-        </>
+        </BrowserRouter>
     );
-  }
+    
+
+export default App
+  

@@ -6,6 +6,7 @@ import Card from "./Card";
 import Button from "./Button";
 import Footer from "./Footer";
 import Dash from "./Dash";
+import SignUpForm from "./SignUpForm";
 
 export {
     Barber,
@@ -16,4 +17,5 @@ export {
     Button,
     Footer,
     Dash,
+    SignUpForm,
 }

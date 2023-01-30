@@ -1,6 +1,8 @@
 import { logo } from '../assets';
 import  animations from '../main.js'
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import SignUpPage from "../pages/SignUpPage.js";
 
 
 const Header = () => {
@@ -19,10 +21,12 @@ const Header = () => {
         </div>
         <nav className="menu slide-in-right">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to={SignUpPage}>Sign in</Link></li>
+            <li><Link to="/">Home</Link></li>
+          
           </ul>
         </nav>
       </div>
