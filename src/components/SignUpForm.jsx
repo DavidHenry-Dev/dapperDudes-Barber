@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "./Button";
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
@@ -21,28 +22,29 @@ const SignUpForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+        <h3>Create your account</h3>
       <input
         type="text"
-        placeholder="Name"
+        placeholder="Name..."
         name="name"
         value={formData.name}
         onChange={handleInputChange}
       />
       <input
         type="email"
-        placeholder="Email"
+        placeholder="Email..."
         name="email"
         value={formData.email}
         onChange={handleInputChange}
       />
       <input
         type="password"
-        placeholder="Password"
+        placeholder="Password..."
         name="password"
         value={formData.password}
         onChange={handleInputChange}
       />
-      <button type="submit">Sign Up</button>
+        <Button className='scheduleBtn'><a href='#'>Sign Up</a></Button>
     </form>
   );
 };
