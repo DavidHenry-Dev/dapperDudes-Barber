@@ -1,5 +1,5 @@
 import Barber from "./Barber";
-import Header from "./Header";
+import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Section from "./Section";
 import Card from "./Card";
@@ -10,7 +10,7 @@ import SignUpForm from "./SignUpForm";
 
 export {
     Barber,
-    Header,
+    Navbar,
     Hero,
     Section,
     Card,

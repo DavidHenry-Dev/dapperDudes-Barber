@@ -1,13 +1,13 @@
 import React from "react";
 import "./style.css";
-import { Header, Footer, } from "./components";
+import { Navbar, Footer, } from "./components";
 import { Routes, Route, } from 'react-router-dom'
 import { SignUpPage, Home } from "./pages";
 
 
 const App =() => (
   <>
-  <Header />
+  <Navbar />
     
     <Routes>
       <Route index element= {<Home />} />
