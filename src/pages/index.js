@@ -1,9 +1,9 @@
 import Home from "./Home";
 import SignUpPage from "./SignUpPage";
-import Gallery from "./Gallery";
+import GalleryPage from "./GalleryPage";
 
 export {
     Home,
     SignUpPage,
-    Gallery
+    GalleryPage,
 }

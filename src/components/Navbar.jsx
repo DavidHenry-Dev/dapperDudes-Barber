@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav>
         <img className="logo" src={ logo } />
         <div className="nav-button" onClick={toggleNav}>
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         </div>
         <div className={
           navMobile ? "nav-menu expanded" : "nav-menu"

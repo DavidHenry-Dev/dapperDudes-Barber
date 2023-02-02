@@ -7,6 +7,7 @@ import Button from "./Button";
 import Footer from "./Footer";
 import Dash from "./Dash";
 import SignUpForm from "./SignUpForm";
+import Gallery from "./Gallery";
 
 export {
     Barber,
@@ -18,4 +19,5 @@ export {
     Footer,
     Dash,
     SignUpForm,
+    Gallery
 }
