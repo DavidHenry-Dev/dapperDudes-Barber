@@ -10,14 +10,8 @@ const Home = () => (
             <div className ="headline">
                 <h1>Refine your look.</h1>
                 <h2> Be bold. Be Dapper.</h2>
-                <p>Define your uniqueness by your hairstyle</p>
             </div>
             <Button className='bookBtn'><a href="#">Book now</a></Button>
-            <div className ="bookNow">
-                <span>Your First Visit?</span>
-                <p>-20% for the first classic hair coloring</p>
-                <button><a href="#">- Book Online</a></button>
-            </div>
         </div>
     </Hero>
     {/* Info & about sections */}

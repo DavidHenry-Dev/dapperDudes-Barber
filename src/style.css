@@ -44,25 +44,45 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   padding: 0.5rem 0rem;
   background-color: #000;
+}
+
+.logo {
+ height: 35px;
+ width: 35px;
+ margin: .5rem;
+ display: none;
 }
 
 .nav-menu {
     display: flex;
     width: 100%;
     justify-content: flex-end;
+    align-items: center;
     margin: 0;
   }
+  
+.nav-button {
+    position: absolute;
+    right: 15px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    cursor: pointer;
+    background-color: #000;
+    color:#fff;
+}
 
+.nav-button:hover {
+    color:#f0b45b;
+}
 
-.logo {
- height: 40px;
- width: 40px;
- padding: 0;
- margin: .5rem;
- display: none;
+.nav-button i {
+    font-size: 2.2rem;
 }
 
 .nav-menu ul {
@@ -81,37 +101,17 @@ nav {
     width: 100%;
 }
 
-/* ------MOBILE NAV-------- */
-
-.nav-button {
-    position: absolute;
-    top: 50%;
-    right: 25px;
-    padding: 0.5rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 24px;
-    cursor: pointer;
-    background-color: #000;
-    transform: translateY(-50%)
-  }
-  
-
-/* .slide-in-right {
+.slide-in-right {
     animation: slide-in-right 0.4s ease-out;
     animation-fill-mode: both;
     display: none;
 }
 
-.slide-close{
-    animation: slide-close 0.4s ease-in;
-    animation-fill-mode: both;
-    display: none;
-} */
-
 @media screen and (max-width: 768px) {
+    .logo {
+        display: block;
+    }
+
     .nav-button {
         display: block;
     }
@@ -140,6 +140,8 @@ nav {
     }
     .nav-menu.expanded ul {
         display: block;
+        animation: slide-in-right 0.4s ease-out;
+        animation-fill-mode: both;
       }
       
   }
