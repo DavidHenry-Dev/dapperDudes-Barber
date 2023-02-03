@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav>
-        <img className="logo" src={ logo } />
+        <Link to="/"><img className="logo" src={ logo } /></Link>
         <div className="nav-button" onClick={toggleNav}>
           <i className="fa-solid fa-bars"></i>
         </div>

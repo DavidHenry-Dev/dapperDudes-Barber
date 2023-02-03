@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import Dash from "./Dash";
 import SignUpForm from "./SignUpForm";
 import Gallery from "./Gallery";
+import CalendarCmp from "./CalendarCmp";
 
 export {
     Barber,
@@ -19,5 +20,6 @@ export {
     Footer,
     Dash,
     SignUpForm,
-    Gallery
+    Gallery,
+    // CalendarCmp,
 }

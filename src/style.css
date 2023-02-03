@@ -1,6 +1,6 @@
 /****************** GLOBAL STYLING *****************/
 @import "~react-image-gallery/styles/css/image-gallery.css";
-
+@import 'react-calendar/dist/Calendar.css';
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:wght@600&display=swap');
@@ -25,6 +25,10 @@ body {
 .container {
     padding: 0 1rem;
     width: 100%;
+}
+
+button {
+    cursor: pointer;
 }
     
 li,a {
@@ -174,7 +178,6 @@ nav {
 /******************* MAIN & HERO *********************/
 
 .main {
-    /* min-height: 800px; */
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -210,36 +213,31 @@ main p {
     width: 125px;
     background: #f0b45b;
     border: none;
-}
-
-.bookBtn a {
     color: #000;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.bookNow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.75;
-    background:  linear-gradient(
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
-      );
-    width: 175px;
+.bookBtn:hover{
+    background: transparent;
+    color:#fff;
+    border: 1px solid #fff;
 }
 
-.bookNow button {
-    height: 35px;
-    width: 100px;
+.galleryBtn {
+    background-color: transparent;
+    height: 30px;
+    width: 125px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-.bookNow button a {
-    color: black;
+.galleryBtn:hover {
+    background: #f0b45b;
+    border: none;
+    color: #000;
 }
 
 /******* ABOUT COMPANY SECTION *********/
@@ -292,41 +290,47 @@ main p {
 }
 
 /********* SERVICES SECTION ***********/
-
 .services-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
     padding: 1rem;
-    row-gap: 2.5rem;
+    gap: 2.5rem;
+}
+
+.card  {
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background-color: #faf0dd;
+    height: 10rem;
+    width: 30rem;
 }
 
 .services-section h2 {
+    display: block;
+    width: 100%;
     font-size: 2rem;
     text-align: center;
     font-style: italic;
     color: #3e4247;
 }
 
-.service {
-    background-color: #faf0dd;
-    height: 10rem;
-    width: 34rem;
-} 
-
 .scheduleBtn {
+    display:block;
+    /* width: 100%; */
     margin-top: 1rem;
     height: 30px;
     width: 125px;
     background: #0e121a;
     border: none;
-}
-
-.scheduleBtn a {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+.scheduleBtn:hover {
+    background: #344361;
 }
 
 .dashContainer2{
@@ -355,7 +359,7 @@ main p {
 /************ MEET THE TEAM SECTION **********/
 .team-section {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   margin-top: 6rem;
   background: #0e121a;
@@ -364,6 +368,7 @@ main p {
 }
 
 .team-section h2 {
+    width: 100%;
     margin-top: 5rem;
     margin-bottom: 8rem;
     font-size: 2rem;
@@ -450,11 +455,17 @@ main p {
     background: #0e121a;
     border: none;
     color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-/* .appntBtn a {
+.appntBtn a {
     color: #fff;
-} */
+}
+
+.appntBtn:hover {
+    background: #344361;
+}
 
 /********* FOOTER ****************/
 

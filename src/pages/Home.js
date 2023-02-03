@@ -1,5 +1,6 @@
 import { Dash, Section, Barber, Card, Hero, Button } from "../components"
 import { barber1, barber2, barber3, cuttingHair } from '../assets'
+import { Link } from "react-router-dom"
 
 
 const Home = () => (
@@ -11,7 +12,8 @@ const Home = () => (
                 <h1>Refine your look.</h1>
                 <h2> Be bold. Be Dapper.</h2>
             </div>
-            <Button className='bookBtn'><a href="#">Book now</a></Button>
+            <Link to="/signuppage"><Button className='bookBtn'>Book now</Button></Link>
+            <Link to="/gallerypage"><Button className='galleryBtn'>View our Work</Button></Link>            
         </div>
     </Hero>
     {/* Info & about sections */}
@@ -27,8 +29,8 @@ const Home = () => (
         <Card className='service' icon="fas fa-cut" title='The Classic' service="Indulge in our Classic Shampoo and Style service, where we'll pamper your hair with a luxurious shampoo and conditioner, followed by a precision styling to leave you looking and feeling refreshed" price="$35.00" />
         <Card className='service' icon="fas fa-cut" title='Traditional Straight Razor Shave' service='The ultimate in grooming with our Traditional Straight Razor Shave. Starts with a hot towel to open your pores, followed by a rich lather and a close, smooth shave using a straight razor' price='$40.00' />
         <Card className='service' icon="fas fa-cut" title="Art of Hair Coloring" price="$65.00" service="Transform yourself with our coloring service. Our experts will work with you to create a dashing look that compliments and enhances your features. Whether you're looking for a subtle change or a bold statement, we have the skills and experience to deliver it"/>
-        <Button className='scheduleBtn'><a href='#'>Schedule now</a></Button>
     </Section>
+        <Link to="signuppage"><Button className='scheduleBtn'>Schedule now</Button></Link>
     <Dash containerClass='dashContainer2' dashClass='dash2' title='The team'/>
     {/* team section */}
     <Section className="team-section" title='Masters of the craft'>
@@ -43,7 +45,7 @@ const Home = () => (
             <p><i className="fa fa-envelope"></i> info@example.com</p>
             <p><i className="fa fa-map-marker"></i> 123 Main St, Anytown USA</p>
         </div>
-        <Button className='appntBtn'>Make an appointment</Button>
+        <Link to='/signuppage'><Button className='appntBtn'>Make an appointment</Button></Link>
     </Section>
 </>
 
