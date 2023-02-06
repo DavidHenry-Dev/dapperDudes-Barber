@@ -10,7 +10,7 @@ const AccountPage = () => {
       <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem', margin: '5rem'}}>
         <h1>{value.toLocaleString()}</h1>
         <Calendar onChange={setValue} value={value} />
-        <Button>Submit appt.</Button>
+        <Button className='signUpBtn'>Submit appt.</Button>
       </div>
     );
   };

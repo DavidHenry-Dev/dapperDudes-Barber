@@ -1,10 +1,8 @@
-import react from "react";
 import ImageGallery from "react-image-gallery";
-import { barber1, barber2, barber3 } from "../assets";
-import lookBook from "../assets/gallery";
+import galleryAssets from "../assets/galleryAssets";
 
 const Gallery = () => {
-const images = lookBook.map((img, i )=> {
+const images = galleryAssets.map((img, i )=> {
     return {
       original: img,
       originalHeight: "600px",

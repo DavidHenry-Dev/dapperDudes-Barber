@@ -8,7 +8,7 @@ import hairstyle7 from './hairstyle7.jpg'
 import hairstyle8 from './hairstyle8.jpg'
 import hairstyle9 from './hairstyle9.jpg'
 
-const lookBook = [
+const galleryAssets = [
     hairstyle1,
     hairstyle2,
     hairstyle3,
@@ -20,4 +20,4 @@ const lookBook = [
     hairstyle9,
 ]
 
-export default lookBook
+export default galleryAssets

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 
+
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -44,7 +45,7 @@ const SignUpForm = () => {
         value={formData.password}
         onChange={handleInputChange}
       />
-        <Button className='scheduleBtn'><a href='#'>Sign Up</a></Button>
+        <Button className='scheduleBtn'>Sign Up</Button>
     </form>
   );
 };

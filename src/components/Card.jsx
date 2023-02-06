@@ -11,10 +11,7 @@ const Card = ({ title, className, price, icon, service }) => (
         <h3 style={{ 
           margin: 0, 
           color: '#0e121a',
-          fontSize: '1.1rem'
-          // display: 'flex',
-          // justifyItems: 'center',
-          
+          fontSize: '1.1rem'          
            }}>
           <i className={icon} style={{
               color: '#f0b45b', 
