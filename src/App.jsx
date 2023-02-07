@@ -14,7 +14,8 @@ const App =() => (
       <Route path="/signuppage" element={<SignUpPage />} />
       <Route path="/gallerypage" element={<GalleryPage />} />
       <Route path="/accountpage" element={<AccountPage />} />
-      <Route path="/test" element={<TestPage />} />
+      <Route path="/accountpage/submit" />
+      <Route path="/testpage" element={<TestPage />} />
     </Routes> 
   
   <Footer className={'footer'} /> 

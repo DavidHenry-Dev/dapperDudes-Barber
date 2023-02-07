@@ -3,6 +3,8 @@ const express = require("express")
 const app = express()
 const methodOverride = require('method-override')
 
+import connectDB from './mongoDB/connect'
+
 // USE ENV VARIABLES
 require("dotenv").config()
 
@@ -17,10 +19,19 @@ app.use(methodOverride('_method'))
 
 
 // SERVER LISTENER
-app.listen( PORT, ()=> console.log(`Listening on port: ${PORT}`))
+const startServer = async () => {
+    try {
+      connectDB(process.env.MONGODB_URL);
+      app.listen(5000, () => console.log('Server started on port 8080'));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  startServer()
 
 // CONNECTION TEST
-app.get('/test', (req, res) => {
+app.get('localhost:5000/accountpage', (req, res) => {
     const data = { message: 'Hello from the server!' };
     res.json(data);
   });
